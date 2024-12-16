@@ -17,7 +17,7 @@ class RecommendationRequest(BaseModel):
 # Load and process data (sample size and confidence threshold can be modified)
 def load_data():
     """Load the data."""
-    users_df = pd.read_csv('data/users.csv')
+    users_df = pd.read_csv('users.csv')
     users_df['likes'] = users_df['likes'].apply(ast.literal_eval)
     return users_df
 
